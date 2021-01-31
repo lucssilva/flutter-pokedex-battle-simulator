@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:pokedex/view/screens/pokelist.screen.dart';
 
 //  app_widget.dart
 class AppWidget extends StatelessWidget {
   @override
   Widget build(_) => MaterialApp(
-        initialRoute: "/",
+        initialRoute: '/',
         navigatorKey: Modular.navigatorKey,
         onGenerateRoute: Modular.generateRoute,
       );
@@ -18,7 +19,7 @@ class AppModule extends MainModule {
 
   @override
   List<ModularRouter> get routers => [
-        ModularRouter('/', child: (_, __) => Container()),
+        ModularRouter('/', child: (_, __) => PokeListScreen()),
       ];
 
   @override
