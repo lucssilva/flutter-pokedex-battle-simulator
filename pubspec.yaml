@@ -18,12 +18,18 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  dio: ^3.0.10
+  mobx: ^1.2.1+4
+  flutter_mobx: ^1.1.0+2
+  flutter_modular: ^2.0.1
+  cached_network_image: ^2.5.0
   flutter:
     sdk: flutter
-  flutter_modular: ^2.0.1
-  cupertino_icons: ^1.0.0
+  # cupertino_icons: ^1.0.0
 
 dev_dependencies:
+  build_runner: ^1.10.9
+  mobx_codegen: ^1.1.2
   flutter_test:
     sdk: flutter
 
@@ -49,3 +55,6 @@ flutter:
         - asset: assets/fonts/ProductSans-Regular.ttf
         - asset: assets/fonts/ProductSans-Bold.ttf
           weight: 700
+
+# flutter packages pub run build_runner build --delete-conflicting-outputs
+# https://stackoverflow.com/questions/30140112/how-do-i-hide-certain-files-from-the-sidebar-in-visual-studio-code

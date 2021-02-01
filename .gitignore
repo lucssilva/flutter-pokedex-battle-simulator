@@ -76,3 +76,4 @@ doc/api/
 
 # Local History for Visual Studio Code
 .history/
+ios/Podfile.lock
