@@ -50,10 +50,10 @@ flutter:
   # https://flutter.dev/assets-and-images/#from-packages
     
   fonts:
-    - family: Product Sans
+    - family: TTNorms
       fonts:
-        - asset: assets/fonts/ProductSans-Regular.ttf
-        - asset: assets/fonts/ProductSans-Bold.ttf
+        - asset: assets/fonts/TTNorms-Regular.otf
+        - asset: assets/fonts/TTNorms-Bold.otf
           weight: 700
 
 # flutter packages pub run build_runner build --delete-conflicting-outputs
