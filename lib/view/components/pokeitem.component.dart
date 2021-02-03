@@ -33,17 +33,25 @@ class PokeItemListTile extends StatelessWidget {
   final String pokename;
 
   @override
-  build(_) => ListTile(leading: Image(image: image), title: Text(pokename));
+  build(_) => ListTile(
+        leading: Image(image: image),
+        title: Text(pokename),
+        trailing: Row(
+          children: [
+            Icon(Icons.help_outline),
+          ],
+        ),
+      );
 }
 
 class PokeItemErrorListTile extends StatelessWidget {
   @override
   build(_) =>
-      ListTile(leading: Icon(Icons.help_outlined), title: Text('????????????'));
+      ListTile(leading: Icon(Icons.help_outline), title: Text('?????????????'));
 }
 
 class PokeItemLoadingListTile extends StatelessWidget {
   @override
-  build(_) =>
-      ListTile(leading: CircularProgressIndicator(), title: Text('??????????'));
+  build(_) => PokeItemErrorListTile();
+  // ListTile(leading: CircularProgressIndicator(), title: Text('??????????'));
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 abstract class UI {
   static Color getColorType(String type) {
@@ -41,6 +42,68 @@ abstract class UI {
         return Colors.pinkAccent[100];
       default:
         return Colors.black;
+    }
+  }
+
+  static SvgPicture getIconType(String type) {
+    switch (type) {
+      case 'normal':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'fire':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'water':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'grass':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'electric':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'ice':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'fighting':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'poison':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'ground':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'flying':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'psychic':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'bug':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'rock':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'ghost':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'dark':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'dragon':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'steel':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      case 'fairy':
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+      default:
+        return SvgPicture.asset(
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
     }
   }
 }

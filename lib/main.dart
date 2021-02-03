@@ -6,15 +6,7 @@ import 'package:pokedex/routers/pokedex.module.dart';
 import 'package:pokedex/services/httpclient.service.dart';
 import 'package:pokedex/utils/constants.dart';
 
-//  app_widget.dart
-class AppWidget extends StatelessWidget {
-  @override
-  Widget build(_) => MaterialApp(
-        initialRoute: '/',
-        navigatorKey: Modular.navigatorKey,
-        onGenerateRoute: Modular.generateRoute,
-      );
-}
+void main() => runApp(ModularApp(module: AppModule()));
 
 // app_module.dart
 class AppModule extends MainModule {
@@ -34,4 +26,19 @@ class AppModule extends MainModule {
   Widget get bootstrap => AppWidget();
 }
 
-void main() => runApp(ModularApp(module: AppModule()));
+//  app_widget.dart
+class AppWidget extends StatelessWidget {
+  @override
+  Widget build(_) => MaterialApp(
+        initialRoute: '/',
+        navigatorKey: Modular.navigatorKey,
+        onGenerateRoute: Modular.generateRoute,
+        theme: GlobalStyle.buildThemeData,
+      );
+}
+
+// app_styles.dart
+abstract class GlobalStyle {
+  static ThemeData get buildThemeData => ThemeData(
+      fontFamily: 'TTNorms', dividerTheme: DividerThemeData(thickness: 2));
+}
