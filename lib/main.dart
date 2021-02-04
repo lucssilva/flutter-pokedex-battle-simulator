@@ -40,5 +40,12 @@ class AppWidget extends StatelessWidget {
 // app_styles.dart
 abstract class GlobalStyle {
   static ThemeData get buildThemeData => ThemeData(
-      fontFamily: 'TTNorms', dividerTheme: DividerThemeData(thickness: 2));
+        fontFamily: 'TTNorms',
+        dividerTheme: DividerThemeData(thickness: 2),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
+          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        ),
+      );
 }

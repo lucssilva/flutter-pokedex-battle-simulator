@@ -58,5 +58,5 @@ flutter:
         - asset: assets/fonts/TTNorms-Bold.otf
           weight: 700
 
-# flutter packages pub run build_runner build --delete-conflicting-outputs
+# flutter pub run build_runner build --delete-conflicting-outputs
 # https://stackoverflow.com/questions/30140112/how-do-i-hide-certain-files-from-the-sidebar-in-visual-studio-code

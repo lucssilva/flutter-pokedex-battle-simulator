@@ -9,10 +9,13 @@ import 'package:pokedex/view/components/pokeitem.component.dart';
 class PokeDataWidget extends StatelessWidget {
   final _controller = Modular.get<PokeDataController>();
   PokeDataWidget() {
-    _controller.getPokemonsFromAPI();
+    if (_controller.pokelist.isEmpty) _controller.getPokemonsFromAPI();
   }
   @override
   build(_) => Observer(builder: (_) {
+        if (_controller.pokemons.status == FutureStatus.fulfilled)
+          _controller.setPokelist(_controller.pokemons.value);
+
         switch (_controller.pokemons.status) {
           case FutureStatus.pending:
             return Column(
@@ -42,11 +45,13 @@ class PokeDataWidget extends StatelessWidget {
 
           case FutureStatus.fulfilled:
           default:
-            return ListView.separated(
-              itemCount: _controller.pokemons.value.length,
-              separatorBuilder: (context, index) => Divider(),
-              itemBuilder: (context, index) =>
-                  PokeItemComponent(_controller.pokemons.value[index].name),
+            return Observer(
+              builder: (_) => ListView.separated(
+                itemCount: _controller.pokelist.length,
+                separatorBuilder: (context, index) => Divider(),
+                itemBuilder: (context, index) =>
+                    PokeItemComponent(_controller.pokelist[index].name),
+              ),
             );
         }
       });
