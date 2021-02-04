@@ -47,9 +47,9 @@ abstract class UI {
 
   static SvgPicture getIconType(String type) {
     switch (type) {
-      case 'normal':
+      /* case 'normal':
         return SvgPicture.asset(
-            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+            'assets/icons/Types/${Format.toUpperFirst(type)}.svg'); */
       case 'fire':
         return SvgPicture.asset(
             'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
@@ -102,8 +102,7 @@ abstract class UI {
         return SvgPicture.asset(
             'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
       default:
-        return SvgPicture.asset(
-            'assets/icons/Types/${Format.toUpperFirst(type)}.svg');
+        return SvgPicture.asset('assets/icons/Types/Normal.svg');
     }
   }
 }

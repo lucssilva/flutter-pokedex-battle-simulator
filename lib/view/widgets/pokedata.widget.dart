@@ -43,11 +43,11 @@ class PokeDataWidget extends StatelessWidget {
           case FutureStatus.fulfilled:
           default:
             return ListView.separated(
-                cacheExtent: 151,
-                itemCount: _controller.pokemons.value.length,
-                separatorBuilder: (context, index) => Divider(),
-                itemBuilder: (context, index) =>
-                    PokeItemComponent(_controller.pokemons.value[index].name));
+              itemCount: _controller.pokemons.value.length,
+              separatorBuilder: (context, index) => Divider(),
+              itemBuilder: (context, index) =>
+                  PokeItemComponent(_controller.pokemons.value[index].name),
+            );
         }
       });
 }
