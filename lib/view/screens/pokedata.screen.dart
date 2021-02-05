@@ -7,22 +7,19 @@ import 'package:pokedex/view/widgets/pokedata.widget.dart';
 class PokeDataScreen extends StatelessWidget {
   final _controller = Modular.get<PokeDataController>();
   @override
-  build(_) => Scaffold(
-        appBar: AppBar(elevation: 0, backgroundColor: Colors.transparent),
-        body: CustomBackgroundWidget(
-          child: Column(children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 32),
-              child: TextField(
-                onChanged: _controller.searchPokelist,
-                decoration: InputDecoration(
-                  hintText: 'Search',
-                  prefixIcon: Icon(Icons.search_rounded),
-                ),
+  build(_) => CustomBackgroundWidget(
+        child: Column(children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 32),
+            child: TextField(
+              onChanged: _controller.searchPokelist,
+              decoration: InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search_rounded),
               ),
             ),
-            Expanded(child: PokeDataWidget()),
-          ]),
-        ),
+          ),
+          Expanded(child: PokeDataWidget()),
+        ]),
       );
 }
