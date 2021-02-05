@@ -1,6 +1,11 @@
 # Pokedex Battle Simulator
+## Screenshots
+[x] Pokelist:
+![App screenshot of pokemon list with search field](https://raw.githubusercontent.com/lucssilva/flutter-pokedex-battle-simulator/master/assets/screenshots/screenshot_01.png?token=AQ3MOQY744ICFZDAVG4OFLLADSPXG)
 
 ## Credits
+Project inspired by [Renato Mota's Pokedex playlist](https://www.youtube.com/watch?v=3xUsD0XRa04&list=PLHAtJbrQ17AVj0LJEc955109XpX925Pt1) on his [Youtube channel](https://www.youtube.com/c/RenatoMotaDev) 
+
 App Icon made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com/)
 
 This project uses [Modular](https://pub.dev/packages/flutter_modular), a bunch of Flutter-suiting solutions to deal with project structure mantainable and reusable.
