@@ -30,7 +30,8 @@ class AppModule extends MainModule {
 class AppWidget extends StatelessWidget {
   @override
   Widget build(_) => MaterialApp(
-        initialRoute: '/',
+        // debugShowCheckedModeBanner: false,
+        initialRoute: Modular.initialRoute,
         navigatorKey: Modular.navigatorKey,
         onGenerateRoute: Modular.generateRoute,
         theme: GlobalStyle.buildThemeData,
